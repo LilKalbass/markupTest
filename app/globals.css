@@ -2,20 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+    * {
+        @apply box-border scroll-smooth
+    }
+    body {
+        @apply text-white
+    }
+    button {
+        @apply text-grey-iconButton
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    .swiper-container:hover .swiper-button-next,
+    .swiper-container:hover .swiper-button-prev {
+        display: block;
+    }
 }
