@@ -1,6 +1,5 @@
 import React from 'react'
 import {AboutCarousel} from "@/components/AboutCarousel";
-import {FaArrowRight} from "react-icons/fa";
 
 const aboutData = [
     {
